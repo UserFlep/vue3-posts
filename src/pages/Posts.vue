@@ -1,7 +1,7 @@
 <template>
   <div>
 <!--    Поиск-->
-    <my-input v-model="searchValue" placeholder="Поиск по названию"/>
+    <my-input v-model="searchValue" v-focus placeholder="Поиск по названию"/>
 
 <!--    Кнопки-->
     <div class="head__btns">
@@ -47,7 +47,7 @@ export default {
   mounted() {
     //Получаем первую партию постов
     this.fetchPosts()
-    //Подписываемся на попадания "observerable-а" в область видимости браузера для динамической подгрузки постов
+    // Подписываемся на попадания "observerable-а" в область видимости браузера для динамической подгрузки постов
     //Опции
     const options = {
       rootMargin: '0px',
@@ -64,7 +64,7 @@ export default {
     };
     const observer = new IntersectionObserver(callback, options);
     //Ссылка а наблюдаемый обьект
-    const target = this.$refs.observable;
+    const target = this.$refs.observable
     observer.observe(target);
   },
   methods: {
@@ -131,12 +131,12 @@ export default {
 }
 </script>
 <style scoped>
-.head__btns {
-  margin: 15px 0;
-  display: flex;
-  justify-content: space-between;
-}
-.observable {
-  height: 50px;
-}
+  .head__btns {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .observable {
+    height: 50px;
+  }
 </style>

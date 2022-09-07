@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Описание поста с ID = {{$route.params.id}}</h1>
-    <div v-for="[key, value] in Object.entries(post)">{{key}}: {{ value }}</div>
+    <div v-for="[key, value] in Object.entries(post)" :key="key">{{key}}: {{ value }}</div>
   </div>
 </template>
 
