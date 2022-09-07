@@ -21,7 +21,7 @@ export default {
     async fetchPost(){
       try {
         console.log("fetchPost")
-        const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${this.$route?.params?.id}`);
+        const response = await axios.get(`${process.env.VUE_APP_API_URL}/posts/${this.$route?.params?.id}`);
         this.post = response.data
       } catch (e){
         console.log(e)

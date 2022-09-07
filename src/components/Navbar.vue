@@ -2,9 +2,10 @@
   <div class="navbar">
     <div class="logo" @click="$router.push('/')">Лого</div>
     <div class="navbar__btns">
-      <my-button class="navbar__btn" @click="$router.push('/posts')">Посты</my-button>
+      <my-button class="navbar__btn" @click="$router.push('/posts')">Option Api Посты</my-button>
       <my-button class="navbar__btn" @click="$router.push('/about')">О нас</my-button>
-      <my-button class="navbar__btn" @click="$router.push('/store')">Стор посты</my-button>
+      <my-button class="navbar__btn" @click="$router.push('/store')">Viex посты</my-button>
+      <my-button class="navbar__btn" @click="$router.push('/composition')">Composition API Посты</my-button>
     </div>
   </div>
 </template>

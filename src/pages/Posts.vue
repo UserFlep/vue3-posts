@@ -82,7 +82,7 @@ export default {
       try {
         console.log("fetchPosts")
         this.isPostLoading = true;
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
+        const response = await axios.get(`${process.env.VUE_APP_API_URL}/posts`, {
           params: {
             _page: this.page,
             _limit: this.limit,
@@ -100,7 +100,7 @@ export default {
       try {
         console.log("loadMorePosts")
         this.page +=1;
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
+        const response = await axios.get(`${process.env.VUE_APP_API_URL}/posts`, {
           params: {
             _page: this.page,
             _limit: this.limit,

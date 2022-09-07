@@ -57,7 +57,7 @@ export const postModule = {
             try {
                 console.log("fetchPosts")
                 commit('setIsPostsLoading', true);
-                const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
+                const response = await axios.get(`${process.env.VUE_APP_API_URL}/posts`, {
                     params: {
                         _page: state.page,
                         _limit: state.limit,
@@ -75,7 +75,7 @@ export const postModule = {
             try {
                 console.log("loadMorePosts")
                 commit('setPage', state.page + 1)
-                const response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
+                const response = await axios.get(`${process.env.VUE_APP_API_URL}/posts`, {
                     params: {
                         _page: state.page,
                         _limit: state.limit,
